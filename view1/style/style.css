@@ -2,6 +2,7 @@ html,body,ul,ol,dl{
     margin: 0;
     padding: 0;
     border:0;
+    color: #fff;
 }
 html,body{
     background-color: rgb(8,19,37);
@@ -35,13 +36,11 @@ ul,ol,dl{
 .con .con_left{
     width: 70%;
     height: 6rem;
-    background: #ccc;
     float: left;
 }
 .con .con_right{
     width: 30%;
     height: 6rem;
-    background:#f60;
     float: right;
 }
 .con .con_left .con_left_hd{
@@ -88,8 +87,27 @@ ul,ol,dl{
     width: auto;
     height: 3.2rem;
 }
-
-
+.con .con_right .con_r_hd{
+    width: 90%;
+    height: 1.5rem;
+}
+.con .con_right .con_r_bd{
+    width: 90%;
+    height: 1.5rem;
+    text-align: center;
+}
+.con .con_right .con_r_ft{
+    width: 90%;
+    height: 1.5rem;
+}
+.con .con_right .con_r_hd ul li{
+    width: 50%;
+    height: 0.5rem;
+    float: left;
+    text-align: center;
+    line-height: 0.5rem;
+    color: #fff;
+}
 
 
 
