@@ -1,0 +1,125 @@
+html,body,ul,ol,dl{
+    margin: 0;
+    padding: 0;
+    border:0;
+    color: #fff;
+}
+html,body{
+    background-color: rgb(8,19,37);
+}
+ul,ol,dl{
+    list-style: none;
+}
+.header{
+    width: 100%;
+    height: 0.6rem;
+}
+.header ul{
+    float: right;
+    overflow: hidden;
+}
+.header ul li{
+    width: 0.8rem;
+    height: 0.2rem;
+    float: left;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 0.2rem;
+    margin-left: 0.1rem;
+    margin-top: 0.1rem;
+}
+.con{
+    width: 90%;
+    height: 6rem;
+    margin-left: 5%;
+    border: 1px solid rgb(13,71,93);
+}
+.con .con_left{
+    width: 20%;
+    height: 6rem;
+    float: left;
+}
+.con .con_right{
+    width: 80%;
+    height: 6rem;
+    /*background: orange;*/
+    float: right;
+    position: relative;
+}
+/*
+.con .con_left div{
+    width: 80%;
+    height: 0.2rem;
+    margin: 0.1rem auto;
+    border: 0.01rem solid rgb(12,70,92);
+    cursor: pointer;
+}
+*/
+
+.con .con_left ul li,span{
+    list-style-type: none;
+    cursor: pointer;
+    color: white;
+    line-height: 0.28rem;
+    text-align: center;
+}
+
+.con .con_left ul {
+    width: 90%;
+    margin: 0.1rem auto;
+}
+
+.con .con_left ul span {
+    display: block;
+    font-weight: bold;
+    border: 1px solid rgb(12,70,92);
+}
+.con .con_left ul li {
+    border: 1px solid rgb(12,70,92);
+    display: none;
+}
+
+.con .con_left ul li:hover {
+    background-color: orange;
+}
+.con .con_right .con_r_hd{
+    width: 90%;
+    height: auto;
+    margin: 0 0.2rem;
+    /*position: absolute;*/
+    right: 0;
+    top:0;
+}
+.con .con_right .con_r_hd img{
+    width: 100%;
+    height: auto;
+}
+.con .con_right .con_r_bd ul{
+    width: 100%;
+    height: auto;
+}
+.con .con_right .con_r_bd ul li{
+    width: 90%;
+    height: 0.2rem;
+    border: 1px solid rgb(25,102,130);
+    margin-top: 0.1rem;
+    cursor: pointer;
+    padding:0.1rem;
+}
+.con .con_right .con_r_bd .info{
+    width: 90%;
+    height: 2rem;
+    margin: 0.2rem 0;
+    border: 1px solid rgb(25,102,130);
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+

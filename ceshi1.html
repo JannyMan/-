@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        body{max-width: 640px; margin: 0 auto; font-family: 'Microsoft Yahei'}
+        .box{ overflow: hidden; }
+        .box dl{ overflow: hidden; margin-bottom: 10px; border: 1px solid #ddd; }
+        .box dt{ height: 45px; line-height: 45px; padding: 0 10px; background: #FADFF6; font-size: 18px; position: relative; cursor: pointer;}
+        .box dt span{ display: block; width: 0; height: 0; border-left:8px solid transparent; border-right: 8px solid transparent;  position: absolute;right: 10px; top:15px; border-top: 8px solid #98479B}
+        .box dt span.on{
+            transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+        }
+        .box dd{ overflow: hidden; padding: 10px; line-height: 34px; display: none;border-top: 1px solid #ddd;  }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <dl>
+        <dt>买书是最划算的投资<span></span></dt>
+        <dd style="display: block;">
+            <p>古人云：“书中自有黄金屋，书中自有颜如玉。”这说明先贤们早认识到，买书是最划算的投资。</p>
+            <p>我刚出道时，拿着非常微薄的工资。有一次向主管抱怨道：“现在的书真贵啊，这点工资连饭都吃不起，更别说买书了！”主管对我说：“不要吝惜买书的钱，宁可忍着不吃饭，也不要忍着不买书，因为买书是回报率最高的投资。”</p>
+            <p>主管的话让我非常震动。后来，我看到喜欢的书时，再也没有手软过。通过不断学习，我的开发能力不断提高，工资水平也大幅提高。一年后，我一个月工资的涨幅，就足够买两年的书了。你说，还有比这更划算的投资吗？</p>
+            <p>一本书，哪怕只有一页纸是有用的，它所将产生的潜在价值，也会远远超过书本身的价格。当然，书不在多，踏踏实实消化掉一本好书，比泛泛而读10本普通书，要有价值得多。</p>
+        </dd>
+    </dl>
+    <dl>
+        <dt>只学习与工作相关的东西<span></span></dt>
+        <dd>
+            <p>我曾发现不少程序员在学习方面找不到方向，一会儿学学C#，一会儿学学Java，看了最新的编程语言排行榜，又觉得该学C++。这样左抓抓，右挠挠，只会让你觉得更痒。</p>
+            <p>学习最忌三心二意。俗话说：“伤其十指不如断其一指”，每门都学一点，还不如专心学好一个方向。这个道理谁都懂，可是又该学哪个方向呢？难道只能跟着感觉走吗？不！最实际的方向，应该跟着工作走，工作需要什么，我们就学什么，把工作需要的技能熟练掌握，有很多好处。</p>
+            <p>首先，可以集中精力，在某一方面钻研得更加深入。所谓“百招会不如一招绝”，有了绝招，你还怕不能在“武林”立足吗？《天龙八部》中的慕容复武功博学无比，最后还不是被只会一招六脉神剑的段誉打得落花流水？</p>
+            <p>其次，可以学得更快、更深入，因为学习更具有针对性，而且可以立即在工作中运用，可以马上检验出学习的效果。对存在的问题进行深入研究，掌握的知识也会更加牢固。</p>
+        </dd>
+    </dl>
+</div>
+<script src="js/jquery-1.8.2.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var obj = $('#box');
+        obj.find('dt').on('click',function(){
+            var thisSpan = $(this).children('span');
+            if(!thisSpan.hasClass('on')){
+                obj.find('dt').children('span').removeClass('on');
+                obj.find('dd').hide();
+                thisSpan.addClass('on');
+                $("html,body").scrollTop(thisSpan.offset().top-10);
+                $(this).siblings("dd").show();
+            }else{
+                thisSpan.removeClass('on');
+                $(this).siblings('dd').hide();
+            }
+        })
+    })
+</script>
+</body>
+</html>
