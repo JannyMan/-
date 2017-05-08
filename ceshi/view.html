@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        #info span{
+            margin-left: 10px;
+        }
+
+
+        /*手风琴菜单css样式 开始*/
+        #menu .fir li ul{
+            display: none;
+        }
+        #menu .fir li ul.cur{
+            display: block;
+
+        }
+        #menu .fir li ul.dul{
+            display: none;
+        }
+        #menu>ul>li{
+            margin-top: 10px;
+            background: skyblue;
+        }
+        #menu>ul>li>ul>li{
+            background: lime;
+        }
+        #menu ul li{
+            cursor: pointer;
+        }
+        /*手风琴菜单css样式 开始*/
+
+    </style>
+    <script src="jquery-1.8.2.js"></script>
+    <script src="funFrame.js"></script>
+    <script>
+        window.onload = function () {
+            //假数据
+            var option =[
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2017-1-11 11:22:49','state':'启动','view':'查看日志'},
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2018-3-12 11:22:49','state':'启动','view':'查看日志'},
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2019-5-18 11:22:49','state':'启动','view':'查看日志'},
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2011-6-28 11:22:49','state':'启动','view':'查看日志'},
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2012-7-08 11:22:49','state':'启动','view':'查看日志'},
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2013-9-06 11:22:49','state':'启动','view':'查看日志'},
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2015-1-09 11:22:49','state':'启动','view':'查看日志'},
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2015-1-09 11:22:49','state':'启动','view':'查看日志'},
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2015-1-09 11:22:49','state':'启动','view':'查看日志'},
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2015-1-09 11:22:49','state':'启动','view':'查看日志'},
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2015-1-09 11:22:49','state':'启动','view':'查看日志'},
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2015-1-09 11:22:49','state':'启动','view':'查看日志'},
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2015-1-09 11:22:49','state':'启动','view':'查看日志'},
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2015-1-09 11:22:49','state':'启动','view':'查看日志'},
+                {'name':'下载FTP文件','taskArr':'作业组一','taskType':'测试','time':'2015-1-09 11:22:49','state':'启动','view':'查看日志'}
+            ];
+            view.crDateView(option);
+            view.crDropMenu('cur','dul',function (th) {
+                alert(th);
+            });
+        }
+    </script>
+</head>
+<body>
+<!--显示数据-->
+<h2>动态添加数据</h2>
+<div id="info" class="info">
+    <!--
+    <ul>
+        <li>
+            <span>下载FTP文件</span>
+            <span>作业组一</span>
+            <span>测试</span>
+            <span>2017-5-8 11:22:49</span>
+            <span>启动</span>
+            <span>启动</span>
+        </li>
+    </ul>
+    -->
+</div>
+<br><br><br><br><br>
+
+<h2>左边下拉菜单</h2>
+<!--显示左边下拉菜单 模板-->
+<div id="menu">
+    <ul class="fir">
+        <li>
+            <span>任务管理</span>
+            <ul>
+                <li>任务管理2</li>
+                <li>任务管理2</li>
+                <li>任务管理2</li>
+            </ul>
+        </li>
+        <li>
+            <span>任务管理</span>
+            <ul>
+                <li>任务管理2</li>
+                <li>任务管理2</li>
+                <li>任务管理2</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
